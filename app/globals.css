@@ -156,3 +156,6 @@ body {
 
 .masthead{align-items:center}.settings-trigger{transform:translateY(7px);gap:4px}
 
+
+.settings-trigger{transform:translateY(var(--settings-offset,7px));gap:var(--settings-gap,4px)}.position-adjust-dialog{top:auto!important;left:auto!important;bottom:20px!important;right:20px!important;transform:none!important;max-height:calc(100dvh - 140px)!important}.position-sliders{display:grid;gap:20px;padding:8px 0 16px}.position-sliders label{flex-direction:row;justify-content:space-between}.position-sliders [data-slot=slider-thumb]{width:22px;height:22px}.position-sliders [data-slot=slider-track]{height:6px}.position-sliders output{font-variant-numeric:tabular-nums}.position-adjust-dialog~[data-slot=dialog-overlay]{display:none}@media(max-width:700px){.position-adjust-dialog{right:16px!important;bottom:16px!important}}
+
