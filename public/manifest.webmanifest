@@ -1,3 +1,19 @@
-{"id":"/","name":"doodle do","short_name":"doodle do","lang":"ja","start_url":"./","scope":"./","display":"standalone","background_color":"#fff9dc","theme_color":"#fff9dc","icons":[{"src":"./icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},{"src":"./icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}]}
-
-
+{
+  "id": "/",
+  "name": "doodle do",
+  "short_name": "doodle do",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fff9dc",
+  "theme_color": "#fff9dc",
+  "icons": [
+    {
+      "sizes": "100x100",
+      "src": "./app-icon.png",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
