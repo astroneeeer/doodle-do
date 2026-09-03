@@ -153,3 +153,6 @@ body {
 
 .add-task-label{display:block;width:220px;max-width:90%;height:auto}.add-card{min-height:56px}
 
+
+.masthead{align-items:center}.settings-trigger{transform:translateY(7px);gap:4px}
+
