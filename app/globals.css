@@ -157,3 +157,6 @@ body {
 .masthead{align-items:center}.settings-trigger{transform:translateY(2px);gap:1px}
 
 
+
+.mode-row{align-items:center;flex-wrap:wrap}.mode-row .delete-task{margin-left:auto;background:#c62828;color:#fff;border:1px solid #c62828;min-height:44px;font-weight:600}.mode-row .delete-task:hover{background:#a51f1f;border-color:#a51f1f}
+
