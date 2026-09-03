@@ -141,3 +141,6 @@ body {
 
 .settings-trigger{border:0;border-radius:0;background:transparent;box-shadow:none}
 
+
+.settings-label{display:block;width:66px;height:auto}.settings-trigger{gap:8px}
+
