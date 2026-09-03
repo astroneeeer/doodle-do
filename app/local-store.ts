@@ -1,0 +1,12 @@
+export type Settings={name:string;icon:string;background:string;accent:string};
+export const defaults:Settings={name:'わたしのタスク',icon:'✎',background:'#f4f6fa',accent:'#2456d8'};
+export type Task={id:string;title?:string;strokes?:{x:number;y:number}[][];done:boolean};
+export type Data={tasks:Task[];settings:Settings};
+const color=/^#[0-9a-f]{6}$/i;
+export function validSettings(s:unknown):s is Settings{const v=s as Settings;return !!v&&typeof v.name==='string'&&v.name.trim().length>0&&v.name.length<=40&&typeof v.icon==='string'&&v.icon.length<=16&&color.test(v.background)&&color.test(v.accent)}
+export function validTasks(value:unknown):value is Task[]{return Array.isArray(value)&&value.length<=1000&&new Set(value.map(t=>t?.id)).size===value.length&&value.every(t=>t&&typeof t.id==='string'&&t.id.length<=100&&typeof t.done==='boolean'&&((typeof t.title==='string'&&t.title.trim().length>0&&t.title.length<=100&&!t.strokes)||(t.title===undefined&&Array.isArray(t.strokes)&&t.strokes.length>0&&t.strokes.length<=5000&&t.strokes.every((s:unknown)=>Array.isArray(s)&&s.length>0&&s.length<=50000&&s.every(p=>p&&Number.isFinite(p.x)&&Number.isFinite(p.y)&&p.x>=0&&p.x<=800&&p.y>=0&&p.y<=240)))))}
+let dbPromise:Promise<IDBDatabase>|undefined;
+function db(){return dbPromise??=new Promise((resolve,reject)=>{const req=indexedDB.open('ipad-ink-tasks',1);req.onupgradeneeded=()=>req.result.createObjectStore('board');req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)})}
+export async function readData():Promise<Data>{const database=await db();return new Promise((resolve,reject)=>{const req=database.transaction('board').objectStore('board').get('data');req.onsuccess=()=>{const value=req.result;if(value===undefined){resolve({tasks:[],settings:defaults});return}if(!validTasks(value.tasks)||!validSettings(value.settings)){reject(Error('保存データを読み込めませんでした。'));return}resolve(value)};req.onerror=()=>reject(req.error)})}
+export async function writeData(data:Data){if(!validTasks(data.tasks)||!validSettings(data.settings))throw Error('入力内容を確認してください。');const database=await db();return new Promise<void>((resolve,reject)=>{const tx=database.transaction('board','readwrite');tx.objectStore('board').put(data,'data');tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error)})}
+export function contrast(hex:string){const values=hex.slice(1).match(/../g)!.map(v=>{const s=parseInt(v,16)/255;return s<=.04045?s/12.92:((s+.055)/1.055)**2.4});return values[0]*.2126+values[1]*.7152+values[2]*.0722>.179?'#17243b':'#ffffff'}

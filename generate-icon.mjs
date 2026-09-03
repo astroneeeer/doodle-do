@@ -1,0 +1,2 @@
+import sharp from 'sharp';
+const svg=Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><rect width="512" height="512" rx="104" fill="#2456d8"/><path d="m145 264 74 74 150-164" fill="none" stroke="white" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/></svg>');for(const size of [192,512])await sharp(svg).resize(size,size).png().toFile(`public/icon-${size}.png`);
