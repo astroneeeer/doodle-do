@@ -160,3 +160,6 @@ body {
 
 .mode-row{align-items:center;flex-wrap:wrap}.mode-row .delete-task{margin-left:auto;background:#c62828;color:#fff;border:1px solid #c62828;min-height:44px;font-weight:600}.mode-row .delete-task:hover{background:#a51f1f;border-color:#a51f1f}
 
+
+.task-card[data-sort-id]{-webkit-touch-callout:none;user-select:none;-webkit-user-select:none;cursor:grab}.task-card.dragging-task{opacity:.6;outline:2px solid var(--user-accent);cursor:grabbing}.task-card.drop-target{box-shadow:0 -4px 0 var(--user-accent)}.sorting-tasks{cursor:grabbing}
+
