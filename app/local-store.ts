@@ -1,5 +1,5 @@
 export type Settings={name:string;icon:string;background:string;accent:string};
-export const defaults:Settings={name:'わたしのタスク',icon:'✎',background:'#f4f6fa',accent:'#2456d8'};
+export const defaults:Settings={name:'doodle do',icon:'✎',background:'#f4f6fa',accent:'#2456d8'};
 export type Task={id:string;title?:string;strokes?:{x:number;y:number}[][];done:boolean};
 export type Data={tasks:Task[];settings:Settings};
 const color=/^#[0-9a-f]{6}$/i;
@@ -10,3 +10,4 @@ function db(){return dbPromise??=new Promise((resolve,reject)=>{const req=indexe
 export async function readData():Promise<Data>{const database=await db();return new Promise((resolve,reject)=>{const req=database.transaction('board').objectStore('board').get('data');req.onsuccess=()=>{const value=req.result;if(value===undefined){resolve({tasks:[],settings:defaults});return}if(!validTasks(value.tasks)||!validSettings(value.settings)){reject(Error('保存データを読み込めませんでした。'));return}resolve(value)};req.onerror=()=>reject(req.error)})}
 export async function writeData(data:Data){if(!validTasks(data.tasks)||!validSettings(data.settings))throw Error('入力内容を確認してください。');const database=await db();return new Promise<void>((resolve,reject)=>{const tx=database.transaction('board','readwrite');tx.objectStore('board').put(data,'data');tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error)})}
 export function contrast(hex:string){const values=hex.slice(1).match(/../g)!.map(v=>{const s=parseInt(v,16)/255;return s<=.04045?s/12.92:((s+.055)/1.055)**2.4});return values[0]*.2126+values[1]*.7152+values[2]*.0722>.179?'#17243b':'#ffffff'}
+
