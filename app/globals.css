@@ -154,7 +154,7 @@ body {
 .add-task-label{display:block;width:220px;max-width:90%;height:auto}.add-card{min-height:56px}
 
 
-.masthead{align-items:center}.settings-trigger{transform:translateY(2px);gap:1px}
+.masthead{align-items:center}.settings-trigger{transform:translateY(6px);gap:0px}
 
 
 
@@ -162,4 +162,5 @@ body {
 
 
 .task-card[data-sort-id]{-webkit-touch-callout:none;user-select:none;-webkit-user-select:none;cursor:grab}.task-card.dragging-task{opacity:.6;outline:2px solid var(--user-accent);cursor:grabbing}.task-card.drop-target{box-shadow:0 -4px 0 var(--user-accent)}.sorting-tasks{cursor:grabbing}
+
 
