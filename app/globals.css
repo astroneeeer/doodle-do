@@ -165,3 +165,6 @@ body {
 
 
 
+
+.column:not(.completed) .status-dot{background:rgb(26,208,102)}
+
