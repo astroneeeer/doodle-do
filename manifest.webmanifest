@@ -1,0 +1,19 @@
+{
+  "id": "/",
+  "name": "doodle do",
+  "short_name": "doodle do",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fff9dc",
+  "theme_color": "#fff9dc",
+  "icons": [
+    {
+      "sizes": "92x92",
+      "src": "./app-icon.png",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
