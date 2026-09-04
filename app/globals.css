@@ -192,3 +192,6 @@ body {
 
 .editor-tools-row{display:flex;align-items:center;min-height:46px;margin:0 0 16px}.editor-tools-row .ink-tools{margin:0}.editor-tools-row .delete-task{margin-left:auto;width:auto;height:46px;min-height:46px;padding:0 20px;border:1px solid #c62828;border-radius:8px;background:#c62828;color:#fff;font-size:20px;line-height:1;display:inline-flex;align-items:center;justify-content:center}.editor-tools-row .delete-task:hover{background:#a51f1f;border-color:#a51f1f}.emoji-footer{margin-top:16px}
 
+
+.editor-tools-row .delete-task{width:auto!important;height:46px!important;min-width:67px;padding:0 20px!important}
+
