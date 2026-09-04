@@ -180,3 +180,6 @@ body {
 
 .masthead .brand{gap:0;transform:translateX(10px)}.header-app-icon{display:block;width:46px;height:46px;object-fit:contain;transform:translateY(20px)}.masthead .brand-logo{transform:translateY(20px)}
 
+
+.mode-row button,.ink-tools button{width:46px;height:46px;padding:0;display:inline-grid;place-items:center}.delete-task{width:46px!important;height:46px!important;padding:0!important}
+
