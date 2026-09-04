@@ -174,3 +174,6 @@ body {
 .column:not(.completed) .task-title{height:60px;overflow:hidden;position:relative}
 .column:not(.completed) .task-title svg{position:absolute;left:0;top:50%;width:100%;height:auto;max-height:none;margin:0;transform:translateY(-50%)}
 
+
+.composer-close{margin-left:auto}.emoji-footer{justify-content:flex-end}.mode-row button,.ink-tools button,.emoji-footer .primary{font-size:20px;line-height:1;min-width:46px}.delete-task{font-size:20px!important}
+
