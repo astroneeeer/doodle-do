@@ -177,3 +177,6 @@ body {
 
 .composer-close{margin-left:auto}.emoji-footer{justify-content:flex-end}.mode-row button,.ink-tools button,.emoji-footer .primary{font-size:20px;line-height:1;min-width:46px}.delete-task{font-size:20px!important}
 
+
+.masthead .brand{gap:0;transform:translateX(10px)}.header-app-icon{display:block;width:46px;height:46px;object-fit:contain;transform:translateY(20px)}.masthead .brand-logo{transform:translateY(20px)}
+
