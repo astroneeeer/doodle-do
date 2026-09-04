@@ -168,3 +168,9 @@ body {
 
 .column:not(.completed) .status-dot{background:rgb(26,208,102)}
 
+
+.ink-surface{height:110px}
+.ink-surface .writing-pad{height:110px;min-height:0;aspect-ratio:auto}
+.column:not(.completed) .task-title{height:60px;overflow:hidden;position:relative}
+.column:not(.completed) .task-title svg{position:absolute;left:0;top:50%;width:100%;height:auto;max-height:none;margin:0;transform:translateY(-50%)}
+
