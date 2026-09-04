@@ -195,3 +195,6 @@ body {
 
 .editor-tools-row .delete-task{width:auto!important;height:46px!important;min-width:67px;padding:0 20px!important}
 
+
+.editor-tools-row .delete-task,.emoji-footer .primary{width:68px!important;height:46px!important;min-width:68px!important;padding:0!important}
+
