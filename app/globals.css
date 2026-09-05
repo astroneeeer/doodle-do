@@ -201,3 +201,6 @@ body {
 .ink-surface{position:relative}.eraser-cursor{display:none;position:absolute;transform:translate(-50%,-50%);border:1px solid rgba(23,42,76,.4);border-radius:50%;box-sizing:border-box;pointer-events:none;z-index:2}
 
 
+
+.completed .task-title{position:relative}.completed .task-title::after{content:'';position:absolute;left:2%;right:2%;top:50%;height:2px;border-radius:2px;background:#34312e;opacity:.55;transform:translateY(-50%);pointer-events:none}
+
