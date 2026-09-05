@@ -171,8 +171,8 @@ body {
 
 .ink-surface{height:110px}
 .ink-surface .writing-pad{height:110px;min-height:0;aspect-ratio:auto}
-.column:not(.completed) .task-title{height:60px;overflow:hidden;position:relative}
-.column:not(.completed) .task-title svg{position:absolute;left:0;top:50%;width:100%;height:auto;max-height:none;margin:0;transform:translateY(-50%)}
+.task-title:has(svg){height:60px;overflow:hidden;position:relative}
+.task-title:has(svg) svg{position:absolute;left:0;top:50%;width:100%;height:auto;max-height:none;margin:0;transform:translateY(-50%)}
 
 
 .composer-close{margin-left:auto}.emoji-footer{justify-content:flex-end}.mode-row button,.ink-tools button,.emoji-footer .primary{font-size:20px;line-height:1;min-width:46px}.delete-task{font-size:20px!important}
@@ -199,4 +199,5 @@ body {
 .editor-tools-row .delete-task,.emoji-footer .primary{width:68px!important;height:46px!important;min-width:68px!important;padding:0!important}
 
 .ink-surface{position:relative}.eraser-cursor{display:none;position:absolute;transform:translate(-50%,-50%);border:1px solid rgba(23,42,76,.4);border-radius:50%;box-sizing:border-box;pointer-events:none;z-index:2}
+
 
