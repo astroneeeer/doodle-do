@@ -198,3 +198,5 @@ body {
 
 .editor-tools-row .delete-task,.emoji-footer .primary{width:68px!important;height:46px!important;min-width:68px!important;padding:0!important}
 
+.ink-surface{position:relative}.eraser-cursor{display:none;position:absolute;transform:translate(-50%,-50%);border:1px solid rgba(23,42,76,.4);border-radius:50%;box-sizing:border-box;pointer-events:none;z-index:2}
+
