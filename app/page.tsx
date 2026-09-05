@@ -19,7 +19,7 @@ async function saveInk(){if(task.strokes)await onSave({...task,strokes:inkRef.cu
 async function saveCheck(){const nextDone=checkRef.current.some(s=>s.length>1);await onSave({...completion({...task,checkStrokes:checkRef.current},nextDone),boxVariant:variant(task)})}
 return <article className={`task-card ${task.done?'completed':''}`} data-sort-id={task.id} data-sort-group={task.done?'done':'active'}>
 <button className="sort-handle" data-sort-handle aria-label="長押しして並べ替え"><img src="./task-handle.png" alt=""/></button>
-<div className="hand-check"><img src={`./task-box-${variant(task)}.png`} alt=""/><InkPad className="check-pad" width={100} height={100} strokeWidth={3} eraseRadius={8} strokes={check} onChange={changeCheck} onStart={()=>{}} onEnd={saveCheck} tool={tool}/></div>
+<div className="hand-check"><img src={`./task-box-${variant(task)}.png`} alt=""/><InkPad className="check-pad" width={100} height={100} strokeWidth={4} eraseRadius={32} strokes={check} onChange={changeCheck} onStart={()=>{}} onEnd={saveCheck} tool={tool}/></div>
 <div className="task-title">{task.strokes?<InkPad className="inline-task-pad" strokes={ink} onChange={changeInk} onStart={()=>{}} onEnd={saveInk} tool={tool}/>:<h3>{task.title}</h3>}</div>
 </article>}
 export default function Home(){
