@@ -221,3 +221,5 @@ body {
 .task-card{grid-template-columns:22px 50px minmax(0,1fr)}.completed .sort-handle{visibility:visible}.check-pad .eraser-cursor{z-index:20;background:rgba(255,255,255,.2);box-shadow:0 0 0 1px rgba(255,255,255,.55)}.delete-drop-zone{height:56px;box-sizing:border-box;border:1px dashed rgba(198,40,40,.42);border-radius:9px;display:grid;place-items:center;background:rgba(255,255,255,.35);transition:background .15s,border-color .15s,transform .15s}.delete-drop-zone img{display:block;width:210px;max-width:80%;height:auto;pointer-events:none}.delete-drop-zone.delete-target{background:rgba(198,40,40,.15);border-color:#c62828;transform:scale(1.01)}
 @media(max-width:700px){.task-card{grid-template-columns:20px 46px minmax(0,1fr)}.delete-drop-zone{height:56px}.delete-drop-zone img{width:190px}}
 
+.task-card.completed .task-title::after{content:none}
+
