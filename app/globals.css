@@ -204,3 +204,6 @@ body {
 
 .completed .task-title{position:relative}.completed .task-title::after{content:'';position:absolute;left:2%;right:2%;top:50%;height:2px;border-radius:2px;background:#34312e;opacity:.55;transform:translateY(-50%);pointer-events:none}
 
+
+.completed .task-title{opacity:1}.completed .task-title>svg,.completed .task-title>h3{opacity:.58}.completed .task-title::after{background:#8b8985;opacity:1}
+
