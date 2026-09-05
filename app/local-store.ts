@@ -1,7 +1,7 @@
 import {cleanTasks} from './task-lifecycle';
 export type Settings={name:string;icon:string;background:string;accent:string};
 export const defaults:Settings={name:'doodle do',icon:'',background:'#fff9dc',accent:'#2456d8'};
-export type Task={id:string;title?:string;strokes?:{x:number;y:number}[][];done:boolean;completedAt?:number};
+export type Task={id:string;title?:string;strokes?:{x:number;y:number}[][];checkStrokes?:{x:number;y:number}[][];boxVariant?:number;done:boolean;completedAt?:number};
 export type Data={tasks:Task[];settings:Settings};
 const color=/^#[0-9a-f]{6}$/i;
 export function validSettings(s:unknown):s is Settings{const v=s as Settings;return !!v&&typeof v.name==='string'&&v.name.trim().length>0&&v.name.length<=40&&typeof v.icon==='string'&&v.icon.length<=16&&color.test(v.background)&&color.test(v.accent)}
