@@ -232,3 +232,5 @@ body {
 
 .composer{background:transparent;border:0;box-shadow:none;padding:0}.composer .ink-surface,.composer .ink-surface .writing-pad{height:90px}.task-card,.task-title,.task-title .inline-task-pad,.task-title .inline-task-pad .writing-pad{height:90px;min-height:90px}@media(max-width:700px){.composer{padding:0}.composer .ink-surface,.composer .ink-surface .writing-pad,.task-card,.task-title,.task-title .inline-task-pad,.task-title .inline-task-pad .writing-pad{height:90px;min-height:90px}}
 
+.composer .ink-surface .writing-pad{background:rgba(255,255,255,.55)}
+
