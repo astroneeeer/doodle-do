@@ -225,3 +225,5 @@ body {
 
 .task-column{background:transparent;border:0;padding-left:0;padding-right:0}.tools-only-heading{justify-content:flex-end;margin-bottom:14px}.task-card{background:transparent;border:0;box-shadow:none}.inline-ink-tools button,.mode-row button,.ink-tools button{background:rgba(255,255,255,.55)}.inline-ink-tools button[aria-pressed=true],.mode-row button[aria-pressed=true],.ink-tools button[aria-pressed=true]{background:rgba(255,255,255,.82)}
 
+.add-card,.delete-drop-zone{border-width:2.5px}
+
