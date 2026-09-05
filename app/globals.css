@@ -230,3 +230,5 @@ body {
 .task-column{padding-left:24px;padding-right:24px}.task-card{box-sizing:border-box;width:100%;height:110px;min-height:110px;padding-top:0;padding-bottom:0}.task-title,.task-title .inline-task-pad,.task-title .inline-task-pad .writing-pad{height:110px}
 @media(max-width:700px){.task-column{padding-left:16px;padding-right:16px}.task-card{height:110px;min-height:110px;padding-top:0;padding-bottom:0}}
 
+.composer{background:transparent;border:0;box-shadow:none;padding:0}.composer .ink-surface,.composer .ink-surface .writing-pad{height:90px}.task-card,.task-title,.task-title .inline-task-pad,.task-title .inline-task-pad .writing-pad{height:90px;min-height:90px}@media(max-width:700px){.composer{padding:0}.composer .ink-surface,.composer .ink-surface .writing-pad,.task-card,.task-title,.task-title .inline-task-pad,.task-title .inline-task-pad .writing-pad{height:90px;min-height:90px}}
+
