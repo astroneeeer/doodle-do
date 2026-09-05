@@ -207,3 +207,6 @@ body {
 
 .completed .task-title{opacity:1}.completed .task-title>svg,.completed .task-title>h3{opacity:.58}.completed .task-title::after{background:#8b8985;opacity:1}
 
+
+.completed .task-title::after{background:#1b2740}
+
